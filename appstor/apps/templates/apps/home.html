@@ -1,1 +1,8 @@
-home.html file , hello
+{% for app in apps %}
+<app>
+    <img src="{{app.img}}" alt="{{app.title}}">
+    <h1>{{app.title}}</h1>
+    <p>{{app.description}}</p>
+</app>
+
+{% endfor %}
