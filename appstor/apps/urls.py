@@ -3,5 +3,6 @@ from .views import *
 
 app_name = "apps"
 urlpatterns = [
-    path('', home),
+    path('', home, name = "home"),
+    path('app/<slug:slug>', AppDetail, name = "app_detail"),
 ]

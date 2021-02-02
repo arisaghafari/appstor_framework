@@ -1,15 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 def home(request):
     context = {
-        "apps":[
-            {
-                "title":"arisa",
-                "description":"arisa's first app",
-                "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FApp_Store_(iOS)&psig=AOvVaw2UrVn1RZx1fMsOibu4iLAs&ust=1612174167504000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCmvv32xe4CFQAAAAAdAAAAABAD", 
-            }
-        ]
+        "apps": App.objects.filter(status = 'n').order_by('-created')
     }
     return render(request, "apps/home.html", context)
 
+def AppDetail(request, slug):
+    context = {
+        "app": App.objects.get(slug = slug)
+    }
+    return render(request, "apps/app_detail.html", context)
