@@ -6,7 +6,7 @@ def home(request):
     context = {
         "apps": App.objects.filter(status = 'n').order_by('-created')
     }
-    return render(request, "apps/home.html", context)
+    return render(request, "apps/index.html", context)
 
 def AppDetail(request, slug):
     context = {
