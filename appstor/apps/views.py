@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import *
 
@@ -10,6 +10,6 @@ def home(request):
 
 def AppDetail(request, slug):
     context = {
-        "app": App.objects.get(slug = slug)
+        "app": get_object_or_404(App, slug = slug)
     }
     return render(request, "apps/app_detail.html", context)

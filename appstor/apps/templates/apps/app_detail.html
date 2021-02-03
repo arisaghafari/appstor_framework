@@ -1,8 +1,26 @@
-<app>
-    <img src="{{app.thumbnail.url}}" alt="{{app.title}}" width="200" height="100">
-    <h1>{{app.title}}</h1>
-    <h5>last update: {{app.updated}}</h5>
-    <h5>rate: {{app.Rate}}</h5>
-    <h5>status: {{app.status}}</h5>
-    <p>{{app.description}}</p>
-</app>
+{% extends 'apps/base.html' %}
+
+{% load static %}
+
+{% block main %}
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Jumbotron Header -->
+  <header class="jumbotron my-4">
+    <h1 class="display-3">appstor_framework</h1>
+  </header>
+
+  <!-- Page Features -->
+      <div class="card h-100">
+        <img class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+        <div class="card-body">
+          <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
+          <p class="card-text">{{app.description|linebreaks}}</p>
+        </div>
+      </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock %}
