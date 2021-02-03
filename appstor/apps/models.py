@@ -1,5 +1,12 @@
 from django.db import models
 from django.utils import timezone
+
+class Category(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=100, unique=True)    
+    def __str__(self):
+        return self.title
+
 class App(models.Model):
     STATUS_CHOICES = (
         ('p', 'pay'),
@@ -7,6 +14,7 @@ class App(models.Model):
     )
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
+    category = models.ManyToManyField(Category)
     description = models.TextField()
     thumbnail = models.ImageField(upload_to = "images")
     created = models.DateTimeField(auto_now_add=True)
