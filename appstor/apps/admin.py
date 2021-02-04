@@ -15,7 +15,7 @@ class AppAdmin(admin.ModelAdmin):
     ordering = ['priority', 'created', 'updated']
     
     def category_to_str(self, obj):
-        return 'categories'
+        return ", ".join([category.title for category in obj.category.all()])
 
 
 admin.site.register(App, AppAdmin)

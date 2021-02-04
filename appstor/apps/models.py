@@ -14,7 +14,7 @@ class App(models.Model):
     )
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category, related_name="apps")
     description = models.TextField()
     thumbnail = models.ImageField(upload_to = "images")
     created = models.DateTimeField(auto_now_add=True)

@@ -1,0 +1,14 @@
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'apps:home' %}">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      {% for cat in categories %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'apps:category' cat.slug %}">{{cat.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
