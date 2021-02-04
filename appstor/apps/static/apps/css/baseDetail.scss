@@ -1,0 +1,51 @@
+.detail-page {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  height: 100vh !important;
+  .my-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 48px 0 64px 0;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      .title {
+        margin-top: 20px;
+      }
+    }
+
+    > img {
+      max-width: 300px;
+      max-height: 300px;
+      min-width: 300px;
+      min-height: 300px;
+      border-radius: 20px;
+      margin-right: 20px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: -5px;
+
+      h2 {
+        flex: 1;
+        color: #393939;
+        font-weight: 700;
+      }
+
+      img {
+        max-width: 35px;
+        max-height: 35px;
+        cursor: pointer;
+      }
+    }
+
+    .rate {
+      font-size: 14px;
+      color: #555555;
+    }
+
+
+  }
+}

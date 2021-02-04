@@ -8,7 +8,7 @@
 
   <!-- Jumbotron Header -->
   <header class="jumbotron my-4">
-    <h1 class="display-3">appstor_framework</h1>
+    <h1 style="text-align: center;font-weight: 500" class="display-3">appstor_framework</h1>
   </header>
 
   <!-- Page Features -->
@@ -16,7 +16,7 @@
     {% for app in apps %}
     <div class="col-lg-3 col-md-6 mb-4">
       <div class="card h-100">
-        <img class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+        <img style="width: 100%;min-height: 200px;max-height: 200px;object-fit: cover" class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
         <div class="card-body">
           <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
           <p class="card-text">{{app.description|truncatewords:30|linebreaks}}</p>

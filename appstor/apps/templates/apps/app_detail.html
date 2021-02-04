@@ -6,30 +6,44 @@
 
 {% block main %}
 <!-- Page Content -->
-<div class="container">
+<div class='detail-page'>
+    <div class="container">
+        <!-- Jumbotron Header -->
+        <div class='my-header'>
+            <img class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+            <div style="width: 100%" class='text'>
+                <div class='title'>
+                    <h2>{{app.title}}</h2>
+                    <a href="#">
+                        <img src="../../static/apps/iamges/downlaod-icon.png" alt="download"/>
+                    </a>
+                </div>
 
-  <!-- Jumbotron Header -->
-  <header class="jumbotron my-4">
-    <h1 class="display-3">appstor_framework</h1>
-  </header>
+                <p class="card-text rate">Rate : 5/4</p>
+                <p class="card-text">{{app.description|linebreaks}}</p>
+            </div>
 
-  <!-- Page Features -->
-      <div class="card h-100">
-        <img class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
-        <div class="card-body">
-          <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
-          <p class="card-text">{{app.description|linebreaks}}</p>
+
         </div>
-      </div>
 
-      <form method="POST"> 
-        {% csrf_token %} 
-        {{comment_form.as_p}}
-        <input type="submit" value="submit"> 
-      </form> 
-  <!-- /.row -->
 
-  
+        <!-- Page Features -->
+        <div class="card h-100">
+
+            <div class="card-body">
+
+            </div>
+        </div>
+
+        <form method="POST"
+              {% csrf_token %}
+              {{comment_form.as_p}}
+        <input type="submit" value="submit">
+        </form>
+        <!-- /.row -->
+
+
+    </div>
 </div>
 <!-- /.container -->
 {% endblock %}
