@@ -18,8 +18,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import include
+from accounts.views import signup_view , login_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("apps.urls")),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    #path('login/', login_view, name='login'),
+    path('signup/', signup_view, name='signup'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

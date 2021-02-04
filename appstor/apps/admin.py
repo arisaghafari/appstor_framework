@@ -19,3 +19,11 @@ class AppAdmin(admin.ModelAdmin):
 
 
 admin.site.register(App, AppAdmin)
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('post', 'user' , 'content')
+    #search_fields = ('title',)
+    #prepopulated_fields = {'slug' : ('title',)}
+
+admin.site.register(Comment, CommentAdmin)

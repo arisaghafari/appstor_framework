@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Category, App
 from .forms import CommentForm 
 from .models import Comment
+from django.shortcuts import redirect
 
 
 def home(request):
@@ -19,7 +20,7 @@ def AppDetail(request, slug):
             post=get_object_or_404(App, slug = slug)
             comment = Comment.objects.create(post = post, user = request.user, content = content) 
             comment.save() 
-            return redirect(post.get_absolute_url()) 
+            return redirect("/") 
     else: 
       cf = CommentForm() 
         
