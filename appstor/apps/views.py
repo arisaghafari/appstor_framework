@@ -20,7 +20,7 @@ def AppDetail(request, slug):
             post=get_object_or_404(App, slug = slug)
             comment = Comment.objects.create(post = post, user = request.user, content = content) 
             comment.save() 
-            return redirect("/") 
+            #return redirect("/") 
     else: 
       cf = CommentForm() 
         

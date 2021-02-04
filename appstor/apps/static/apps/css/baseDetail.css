@@ -1,6 +1,5 @@
 .detail-page {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  height: 100vh !important; }
+  font-family: Verdana, Arial, Helvetica, sans-serif; }
   .detail-page .my-header {
     align-items: center;
     display: flex;
@@ -33,5 +32,37 @@
     .detail-page .my-header .rate {
       font-size: 14px;
       color: #555555; }
+  .detail-page .commend-cart {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.06); }
+    .detail-page .commend-cart .profile {
+      display: flex;
+      align-items: center; }
+      .detail-page .commend-cart .profile img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 20px; }
+      .detail-page .commend-cart .profile .detail {
+        margin-left: -8px;
+        display: flex;
+        flex-direction: column; }
+        .detail-page .commend-cart .profile .detail :nth-child(1) {
+          margin-bottom: 6px !important; }
+        .detail-page .commend-cart .profile .detail :nth-child(2) {
+          font-size: 14px;
+          color: #9e9e9e; }
+        .detail-page .commend-cart .profile .detail p {
+          margin: 0 !important;
+          font-size: 22px;
+          color: gray;
+          font-weight: 400; }
+    .detail-page .commend-cart .text {
+      margin-top: 12px;
+      padding: 16px 0 0 20px;
+      color: #3d3d3d; }
 
 /*# sourceMappingURL=baseDetail.css.map */
