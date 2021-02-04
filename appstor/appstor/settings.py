@@ -40,10 +40,10 @@ INSTALLED_APPS = [
     'apps.apps.AppsConfig',
     'rest_framework_swagger',
     'rest_framework',
-
     'django_extensions',
     'crispy_forms',
     'accounts',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,6 @@
 {% extends 'apps/base.html' %}
 
 {% load crispy_forms_tags %}
-
 {% load static %}
 
 {% block main %}
@@ -27,6 +26,10 @@
         {{comment_form.as_p}}
         <input type="submit" value="submit"> 
       </form> 
+      {% for comment in app.comments.all %}
+        <div>nevisande : {{comment.user.username}}</div>
+        <div>{{comment.content}}</div>
+      {% endfor %}
   <!-- /.row -->
 
   
