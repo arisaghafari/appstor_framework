@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     title = models.CharField(max_length=200)
@@ -25,3 +26,8 @@ class App(models.Model):
     status = models.CharField(max_length=1,choices=STATUS_CHOICES)
     def __str__(self):
         return self.title
+
+class Comment(models.Model): 
+    post = models.ForeignKey(App, on_delete = models.CASCADE, related_name ='comments') 
+    user = models.ForeignKey(User, on_delete = models.CASCADE) 
+    content = models.TextField() 

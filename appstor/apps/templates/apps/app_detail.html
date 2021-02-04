@@ -1,5 +1,7 @@
 {% extends 'apps/base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% load static %}
 
 {% block main %}
@@ -21,6 +23,11 @@
       </div>
   <!-- /.row -->
 
+  <form method="POST"> 
+    {% csrf_token %} 
+    {{comment_form.as_p}}
+    <input type="submit" value="submit"> 
+  </form> 
 </div>
 <!-- /.container -->
 {% endblock %}
