@@ -1,5 +1,5 @@
 {% extends 'apps/base.html' %}
-
+{% load ratings %}
 {% load crispy_forms_tags %}
 {% load static %}
 
@@ -17,8 +17,8 @@
                             <img src="../../static/apps/iamges/downlaod-icon.png" alt="download"/>
                         </a>
                     </div>
-
-                    <p class="card-text rate">Rate : 5/4</p>
+                    <hr>
+                    <div>{% ratings app %}</div>
                     {% for proprty in app.pr.all %}
                     <p>{{proprty.title}} : {{proprty.value}}</p>
                     {% endfor %}
