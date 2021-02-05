@@ -8,6 +8,7 @@ from django.shortcuts import redirect
 
 def home(request):
     context = {
+        #"apps": App.objects.filter(status = 'n').order_by('-created'),
         "apps": App.objects.order_by('-created'),
     }
     return render(request, "apps/index.html", context)

@@ -9,7 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 class AppAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug','status','created', 'updated', 'category_to_str')
+    list_display = ('title', 'slug','created', 'updated', 'category_to_str')
     search_fields = ('title', 'description')
     prepopulated_fields = {'slug' : ('title',)}
     ordering = ['created', 'updated']
@@ -19,7 +19,8 @@ class AppAdmin(admin.ModelAdmin):
 
 
 admin.site.register(App, AppAdmin)
-admin.site.register(AppSpec)
+#admin.site.register(AppSpec)
+admin.site.register(Property)
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'user' , 'content')

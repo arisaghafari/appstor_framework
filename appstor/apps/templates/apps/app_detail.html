@@ -19,6 +19,9 @@
                     </div>
 
                     <p class="card-text rate">Rate : 5/4</p>
+                    {% for proprty in app.pr.all %}
+                    <p>{{proprty.title}} : {{proprty.value}}</p>
+                    {% endfor %}
                     <p class="card-text">{{ app.description|linebreaks }}</p>
                 </div>
 
@@ -37,7 +40,7 @@
                         <img src="../../static/apps/iamges/profile-pic.png" alt="profile"/>
                         <div class='detail'>
                             <p>{{ comment.user.username }}</p>
-                            <p>1399/12/5</p>
+                            <p>{{comment.created}}</p>
                         </div>
                     </div>
                     <p class='text card-text'>{{ comment.content }}</p>

@@ -11,36 +11,24 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
-class AppSpec(models.Model):
-    def __init__(self, title, slug, description, status):
-        self.title = title 
-        self.slug = slug
-        self.description = description
-        self.status = status
 
-        
+class Property(models.Model):
+    title = models.CharField(max_length=200)
+    value = models.CharField(max_length=400)
+    def __str__(self):
+        return self.title + " : " + self.value
 
 class App(models.Model):
-    STATUS_CHOICES = (
-        ('p', 'pay'),
-        ('n', 'without pay')
-    )
     title=models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
     category = models.ManyToManyField(Category, related_name="apps")
+    pr = models.ManyToManyField(Property, related_name="apps")
     thumbnail = models.ImageField(upload_to="images")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     description=models.TextField()
-    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-
     def __str__(self):
-        return self.getSpec().title
-
-    def getSpec(self):
-        return AppSpec(self.title, self.slug, self.description, self.status)       
-    
-
+        return self.title
 
 class Comment(models.Model):
     post = models.ForeignKey(App, on_delete=models.CASCADE, related_name='comments')
