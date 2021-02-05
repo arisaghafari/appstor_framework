@@ -22,9 +22,11 @@ from django.conf.urls import include
 from accounts.views import signup_view , login_view
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("apps.urls")),
+    #path('', include("apps.urls")),
+    path('', include("apps.urls", namespace='search')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     #path('login/', login_view, name='login'),
     path('signup/', signup_view, name='signup'),

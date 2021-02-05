@@ -9,7 +9,7 @@ def signup_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/accounts/login')
             #return redirect('posts:list')
     else:
         form = UserCreationForm()
@@ -27,3 +27,4 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})
+
