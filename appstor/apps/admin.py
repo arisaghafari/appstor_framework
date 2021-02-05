@@ -9,17 +9,17 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Category, CategoryAdmin)
 
 class AppAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'priority', 'Rate', 'status', 'created', 'updated', 'category_to_str')
+    list_display = ('title', 'slug','status','created', 'updated', 'category_to_str')
     search_fields = ('title', 'description')
     prepopulated_fields = {'slug' : ('title',)}
-    ordering = ['priority', 'created', 'updated']
+    ordering = ['created', 'updated']
     
     def category_to_str(self, obj):
         return ", ".join([category.title for category in obj.category.all()])
 
 
 admin.site.register(App, AppAdmin)
-
+admin.site.register(AppSpec)
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'user' , 'content')
