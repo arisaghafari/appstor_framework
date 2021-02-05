@@ -1,0 +1,38 @@
+<h1>Search Page</h1>
+
+<br/>
+<form action="{% url 'search:searchposts' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
+<input type="submit" name="submit" value="Search"/>
+</form>
+
+
+{% if submitbutton == 'Search' and request.GET.q != '' %}
+{% if results %}
+<h1>Results for <b>{{ request.GET.q }}</b></h1>
+<br/><br/>
+
+{% for app in results %}
+<div class="col-lg-3 col-md-6 mb-4">
+    <div class="card h-100">
+      <img style="width: 100%;min-height: 200px;max-height: 200px;object-fit: cover" class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+      <div class="card-body">
+        <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
+        <p class="card-text">{{app.description|truncatewords:30|linebreaks}}</p>
+      </div>
+      <div>
+        {% for cat in app.category.all %}
+        <a href="{% url 'apps:category' cat.slug %}">#{{cat.title}}</a>
+        {% endfor %}
+      </div>
+      <div class="card-footer">
+        <a href="{% url 'apps:app_detail' app.slug %}" class="btn btn-primary">more detail</a>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+{% else %}
+No search results for this query
+{% endif %}
+{% endif %}

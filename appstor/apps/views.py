@@ -5,6 +5,7 @@ from .forms import CommentForm
 from .models import Comment
 from django.shortcuts import redirect
 
+from django.db.models import Q
 
 def home(request):
     context = {
@@ -37,4 +38,24 @@ def category(request, slug):
     return render(request, "apps/category.html", context)
 
 
+def searchposts(request):
+    if request.method == 'GET':
+        query= request.GET.get('q')
 
+        submitbutton= request.GET.get('submit')
+
+        if query is not None:
+            lookups= Q(title__icontains=query) 
+
+            results= App.objects.filter(lookups).distinct()
+
+            context={'results': results,
+                     'submitbutton': submitbutton}
+
+            return render(request, 'apps/search.html', context)
+
+        else:
+            return render(request, 'apps/search.html')
+
+    else:
+        return render(request, 'apps/search.html')

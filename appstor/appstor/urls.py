@@ -18,15 +18,20 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import url
 from django.conf.urls import include
 from accounts.views import signup_view , login_view
+from apps.views import searchposts
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("apps.urls")),
+    path('', include("apps.urls", namespace='search')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     #path('login/', login_view, name='login'),
     path('signup/', signup_view, name='signup'),
+    #path('search/', searchposts, name='search'),
+    #path('', include('apps.urls', namespace='search'))
+    #url(r'^search/', include('apps.urls', namespace='search')),
     re_path(r'^ratings/', include('star_ratings.urls', namespace='ratings')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
