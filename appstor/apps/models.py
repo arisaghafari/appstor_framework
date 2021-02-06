@@ -12,17 +12,18 @@ class Category(models.Model):
         return self.title
 
 
-class Property(models.Model):
-    title = models.CharField(max_length=200)
-    value = models.CharField(max_length=400)
-    def __str__(self):
-        return self.title + " : " + self.value
+#class Property(models.Model):
+#    title = models.CharField(max_length=200)
+#    value = models.CharField(max_length=400)
+#    def __str__(self):
+#        return self.title + " : " + self.value
 
 class App(models.Model):
     title=models.CharField(max_length=200)
     slug = models.SlugField(max_length=100, unique=True)
     category = models.ManyToManyField(Category, related_name="apps")
-    pr = models.ManyToManyField(Property, related_name="apps")
+    price = models.IntegerField()
+ #   pr = models.ManyToManyField(Property, related_name="apps")
     thumbnail = models.ImageField(upload_to="images")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

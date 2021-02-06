@@ -6,5 +6,5 @@ register = template.Library()
 @register.inclusion_tag("apps/partials/category_nvabar.html")
 def category_navbar():
     return {
-        "categories": Category.objects.all()
+        "categories": Category.objects.all(),
     }

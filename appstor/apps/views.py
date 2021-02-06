@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Category, App
+from .models import *
 from .forms import CommentForm 
-from .models import Comment
 from django.shortcuts import redirect
 
 from django.db.models import Q
@@ -53,13 +52,13 @@ def searchposts(request):
             context={'results': results,
                      'submitbutton': submitbutton}
 
-            return render(request, 'apps/search.html', context)
+            return render(request, 'apps/search_app.html', context)
 
         else:
-            return render(request, 'apps/search.html')
+            return render(request, 'apps/search_app.html')
 
     else:
-        return render(request, 'apps/search.html')
+        return render(request, 'apps/search_app.html')
 
 
 

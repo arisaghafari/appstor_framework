@@ -18,10 +18,8 @@
                         </a>
                     </div>
                     <hr>
+                    <h5>price : {{app.price}}</h5>
                     <div>{% ratings app %}</div>
-                    {% for proprty in app.pr.all %}
-                    <p>{{proprty.title}} : {{proprty.value}}</p>
-                    {% endfor %}
                     <p class="card-text">{{ app.description|linebreaks }}</p>
                 </div>
 
