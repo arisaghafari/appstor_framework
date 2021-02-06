@@ -1,15 +1,64 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import *
+from .forms import CommentForm 
+from django.shortcuts import redirect
+
+from django.db.models import Q
 
 def home(request):
     context = {
-        "apps":[
-            {
-                "title":"arisa",
-                "description":"arisa's first app",
-                "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FApp_Store_(iOS)&psig=AOvVaw2UrVn1RZx1fMsOibu4iLAs&ust=1612174167504000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCmvv32xe4CFQAAAAAdAAAAABAD", 
-            }
-        ]
+        #"apps": App.objects.filter(status = 'n').order_by('-created'),
+        "apps": App.objects.order_by('-created'),
     }
-    return render(request, "apps/home.html", context)
+    return render(request, "apps/index.html", context)
+
+def AppDetail(request, slug):
+    if request.method == 'POST': 
+        cf = CommentForm(request.POST or None) 
+        if cf.is_valid(): 
+            content = request.POST.get('content') 
+            post=get_object_or_404(App, slug = slug)
+            comment = Comment.objects.create(post = post, user = request.user, content = content) 
+            comment.save() 
+            #return redirect("/") 
+    else: 
+      cf = CommentForm() 
+        
+    context = {
+        "app": get_object_or_404(App, slug = slug),
+        'comment_form':cf,
+    }
+    return render(request, "apps/app_detail.html", context)
+
+def category(request, slug):
+    context = {
+        "category": get_object_or_404(Category, slug = slug),
+    }
+    return render(request, "apps/category.html", context)
+
+
+def searchposts(request):
+    if request.method == 'GET':
+        query= request.GET.get('q')
+
+        submitbutton= request.GET.get('submit')
+
+        if query is not None:
+            lookups= Q(title__icontains=query) 
+
+            results= App.objects.filter(lookups).distinct()
+
+            context={'results': results,
+                     'submitbutton': submitbutton}
+
+            return render(request, 'apps/search_app.html', context)
+
+        else:
+            return render(request, 'apps/search_app.html')
+
+    else:
+        return render(request, 'apps/search_app.html')
+
+
 

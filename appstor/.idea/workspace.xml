@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5354ca74-fcb8-47ba-bcac-24309a9fa031" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/apps/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/apps/css/.sass-cache/2130200a61b9d67eb9d6c17641dcb57c87230625/baseDetail.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/.sass-cache/2130200a61b9d67eb9d6c17641dcb57c87230625/baseDetail.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/app_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/app_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appstor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/appstor/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appstor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appstor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1o21WFQmpbJlJAyPMUcJK1krR2u" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../compass/frontend" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager">
+    <configuration name="appstor" type="Python.DjangoServer" factoryName="Django server">
+      <module name="appstor" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5354ca74-fcb8-47ba-bcac-24309a9fa031" name="Default Changelist" comment="" />
+      <created>1612469900452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612469900452</updated>
+      <workItem from="1612469901996" duration="160000" />
+      <workItem from="1612470457642" duration="2360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="631" y="331" width="719" height="452" key="EditFileWatcherDialog" timestamp="1612471151974">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="631" y="331" width="719" height="452" key="EditFileWatcherDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1612471151974" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612471246124">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1612471246124" />
+    <state x="648" y="128" width="686" height="857" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612471543005">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="648" y="128" width="686" height="857" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1612471543005" />
+  </component>
+</project>

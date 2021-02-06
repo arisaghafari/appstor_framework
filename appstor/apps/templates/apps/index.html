@@ -1,0 +1,45 @@
+{% extends 'apps/base.html' %}
+
+{% load static %}
+
+{% block main %}
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Jumbotron Header -->
+  <br/>
+  <form action="{% url 'search:searchposts' %}" method="GET" value="{{request.GET.q}}">
+    Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
+    <input type="submit" name="submit" value="Search"/>
+    </form> 
+  <header style="border: solid rgba(0,0,0,0.1) 1px;border-radius:15px;padding: 0;  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.06);" class="jumbotron my-4">
+    <img style="border-radius:15px;width: 100%;" src="../../static/apps/iamges/header.jpg" alt="header"/>
+  </header>
+
+  <!-- Page Features -->
+  <div class="row text-center">
+    {% for app in apps %}
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img style="width: 100%;min-height: 200px;max-height: 200px;object-fit: cover" class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+        <div class="card-body">
+          <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
+          <p class="card-text">{{app.description|truncatewords:30|linebreaks}}</p>
+        </div>
+        <div>
+          {% for cat in app.category.all %}
+          <a href="{% url 'apps:category' cat.slug %}">#{{cat.title}}</a>
+          {% endfor %}
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'apps:app_detail' app.slug %}" class="btn btn-primary">more detail</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock %}

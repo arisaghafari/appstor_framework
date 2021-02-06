@@ -1,0 +1,40 @@
+{% extends 'apps/base.html' %}
+
+{% load static %}
+
+{% block main %}
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Jumbotron Header -->
+  <header class="jumbotron my-4">
+    <h1 class="display-3">appstor_framework</h1>
+  </header>
+
+  <!-- Page Features -->
+  <div class="row text-center">
+    {% for app in category.apps.all %}
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="{{app.thumbnail.url}}" alt="{{app.title}}">
+        <div class="card-body">
+          <h4 class="card-title"><a href = "{% url 'apps:app_detail' app.slug %}">{{app.title}}</a></h4>
+          <p class="card-text">{{app.description|truncatewords:30|linebreaks}}</p>
+        </div>
+        <div>
+          {% for cat in app.category.all %}
+          <a href="#">#{{cat.title}}</a>
+          {% endfor %}
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'apps:app_detail' app.slug %}" class="btn btn-primary">more detail</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+{% endblock %}

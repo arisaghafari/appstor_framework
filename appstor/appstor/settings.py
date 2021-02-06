@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'apps.apps.AppsConfig',
     'rest_framework_swagger',
     'rest_framework',
+    'django_extensions',
+    'crispy_forms',
+    'accounts',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+STAR_RATINGS_STAR_HEIGHT = 16

@@ -1,0 +1,53 @@
+{% extends 'apps/base.html' %}
+{% load ratings %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block main %}
+    <!-- Page Content -->
+    <div class='detail-page'>
+        <div class="container">
+            <!-- Jumbotron Header -->
+            <div class='my-header'>
+                <img class="card-img-top" src="{{ app.thumbnail.url }}" alt="{{ app.title }}">
+                <div style="width: 100%" class='text'>
+                    <div class='title'>
+                        <h2>{{ app.title }}</h2>
+                        <a href="#">
+                            <img src="../../static/apps/iamges/downlaod-icon.png" alt="download"/>
+                        </a>
+                    </div>
+                    <hr>
+                    <h5>price : {{app.price}}</h5>
+                    <div>{% ratings app %}</div>
+                    <p class="card-text">{{ app.description|linebreaks }}</p>
+                </div>
+
+
+            </div>
+            <div style="margin: 40px 0">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ comment_form.as_p }}
+                    <input class="btn btn-primary" type="submit" value="submit">
+                </form>
+            </div>
+            {% for comment in app.comments.all %}
+                <div class='commend-cart'>
+                    <div class='profile'>
+                        <img src="../../static/apps/iamges/profile-pic.png" alt="profile"/>
+                        <div class='detail'>
+                            <p>{{ comment.user.username }}</p>
+                            <p>{{comment.created}}</p>
+                        </div>
+                    </div>
+                    <p class='text card-text'>{{ comment.content }}</p>
+                </div>
+            {% endfor %}
+            <!-- /.row -->
+
+
+        </div>
+    </div>
+    <!-- /.container -->
+{% endblock %}
