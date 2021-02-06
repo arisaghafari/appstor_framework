@@ -2,23 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5354ca74-fcb8-47ba-bcac-24309a9fa031" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/static/apps/css/.sass-cache/2130200a61b9d67eb9d6c17641dcb57c87230625/baseDetail.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/.sass-cache/2130200a61b9d67eb9d6c17641dcb57c87230625/baseDetail.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/css/baseDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/static/apps/iamges/downlaod-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/static/apps/iamges/downlaod-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/templates/apps/app_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/app_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/templates/apps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appstor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/appstor/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appstor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appstor/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/partials/category_nvabar.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/partials/category_nvabar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/templates/apps/search_app.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/templates/apps/search_app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -35,6 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../compass/frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunManager">
     <configuration name="appstor" type="Python.DjangoServer" factoryName="Django server">
@@ -73,6 +79,7 @@
       <updated>1612469900452</updated>
       <workItem from="1612469901996" duration="160000" />
       <workItem from="1612470457642" duration="2360000" />
+      <workItem from="1612606339901" duration="6561000" />
     </task>
     <servers />
   </component>
@@ -80,17 +87,25 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="631" y="331" width="719" height="452" key="EditFileWatcherDialog" timestamp="1612471151974">
+    <state x="631" y="331" width="719" height="466" key="EditFileWatcherDialog" timestamp="1612611055299">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="631" y="331" width="719" height="452" key="EditFileWatcherDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1612471151974" />
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612471246124">
+    <state x="631" y="331" width="719" height="466" key="EditFileWatcherDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1612611055299" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1612610612608">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1612471246124" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1612610612608" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1612611057114">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1612611057114" />
     <state x="648" y="128" width="686" height="857" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612471543005">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="648" y="128" width="686" height="857" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1612471543005" />
+    <state x="687" y="292" width="618" height="522" key="find.popup" timestamp="1612607160333">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="687" y="292" width="618" height="522" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1612607160333" />
   </component>
 </project>
