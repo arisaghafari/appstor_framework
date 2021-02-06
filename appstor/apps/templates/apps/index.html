@@ -8,10 +8,7 @@
 
   <!-- Jumbotron Header -->
   <br/>
-  <form action="{% url 'search:searchposts' %}" method="GET" value="{{request.GET.q}}">
-    Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
-    <input type="submit" name="submit" value="Search"/>
-    </form> 
+
   <header style="border: solid rgba(0,0,0,0.1) 1px;border-radius:15px;padding: 0;  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.06);" class="jumbotron my-4">
     <img style="border-radius:15px;width: 100%;" src="../../static/apps/iamges/header.jpg" alt="header"/>
   </header>

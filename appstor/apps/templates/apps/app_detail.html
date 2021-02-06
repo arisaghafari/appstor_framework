@@ -9,16 +9,20 @@
         <div class="container">
             <!-- Jumbotron Header -->
             <div class='my-header'>
-                <img class="card-img-top" src="{{ app.thumbnail.url }}" alt="{{ app.title }}">
+
+                    <img class="card-img-top" src="{{ app.thumbnail.url }}" alt="{{ app.title }}">
+
                 <div style="width: 100%" class='text'>
                     <div class='title'>
                         <h2>{{ app.title }}</h2>
-                        <a href="#">
+                        <a class="btn btn-primary" style="text-decoration:none;box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.06);display: flex;align-items: center;border: gray solid 1px ; padding:12px;border-radius: 5px;border: none"
+                           href="#">
+                            <h5 style="font-size:17px;margin: 2px 8px 0 0;text-decoration: none">
+                                {% if app.price == 0 %}{{ 'Free' }} {% else %} ${{ app.price }} {% endif %}</h5>
                             <img src="../../static/apps/iamges/downlaod-icon.png" alt="download"/>
                         </a>
                     </div>
                     <hr>
-                    <h5>price : {{app.price}}</h5>
                     <div>{% ratings app %}</div>
                     <p class="card-text">{{ app.description|linebreaks }}</p>
                 </div>
@@ -38,7 +42,7 @@
                         <img src="../../static/apps/iamges/profile-pic.png" alt="profile"/>
                         <div class='detail'>
                             <p>{{ comment.user.username }}</p>
-                            <p>{{comment.created}}</p>
+                            <p>{{ comment.created }}</p>
                         </div>
                     </div>
                     <p class='text card-text'>{{ comment.content }}</p>

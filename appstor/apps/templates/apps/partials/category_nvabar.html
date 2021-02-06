@@ -1,21 +1,64 @@
+<style>
+     ::placeholder{
+        color: #c7c7c7;
+    }
+    li{
+        z-index: 100;
+    }
+     @media screen and (max-width: 1188px) and (min-width: 992px){
+      form{
+          margin-left: 180px;
+      }
+    }
+     @media screen  and (max-width: 375px){
+      form{
+          margin-left: 40px;
+      }
+    }
+</style>
+
 <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'accounts:login' %}">Log In</a>
-      </li>
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'apps:home' %}">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      {% for cat in categories %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'apps:category' cat.slug %}">{{cat.title}}</a>
-      </li>
-      {% endfor %}
+    <ul style="width: 100%" class="navbar-nav ml-auto">
+
+
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'apps:home' %}">Home
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+        {% for cat in categories %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'apps:category' cat.slug %}">{{ cat.title }}</a>
+            </li>
+        {% endfor %}
+        <div style="top:6px;position: absolute;width: 100%;display: flex;align-items: center;justify-content: center;margin-top: 5px">
+            <form style="display: flex;" action="{% url 'search:searchposts' %}" method="GET"
+                  value="{{ request.GET.q }}">
+                <div style="display: flex;background-color: rgba(225,225,225,0.15);border-radius: 10px;padding: 1px 5px;margin-top: 2px">
+                    <input  style="color:white;background-color: rgba(0,0,0,0);border: none;outline: none;)"
+                           type="text" name="q" value="{{ request.GET.q }}" placeholder="Search..."/>
+                    <div style="position: relative;margin-left: 6px;min-width: 25px;">
+                        <input  style="z-index:1000;padding: 0;border: none;position: absolute;
+                    left: 0;
+                    min-width: 25px;
+                    opacity: 0;
+max-width: 25px;overflow: hidden" type="submit" name="submit" value="Search"/>
+                        <img style="margin-top:4px;max-width: 18px;
+                    max-height: 18px;
+                position: absolute;
+                left: 0;
+                   " src="../../../static/apps/iamges/magnifier.png"/>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <span style="flex: 1"></span>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:login' %}">Log In</a>
+        </li>
     </ul>
-  </div>
+</div>
